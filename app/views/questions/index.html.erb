@@ -1,0 +1,9 @@
+<% if @questions.any? %>
+  <% @questions.each do |question| %>
+    <h3> <%= question.prompt %> </h3>
+    <%= render 'answers/form', object: question %>
+  <% end %>
+<%else%>
+    <h1>no questions yet</h1>
+<% end %>
+<%= button_to 'Add Question', new_question_path, id: 'new_question_link', class: 'btn btn-default', remote: true, method: 'get' %>

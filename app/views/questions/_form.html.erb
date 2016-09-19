@@ -1,0 +1,11 @@
+<%= render 'layouts/errors', object: @question %>
+
+<%= form_for @question do |f| %>
+  <%= f.label :prompt %>
+  <%= f.text_field :prompt %>
+  <%= f.label :option1 %>
+  <%= f.text_field :option1 %>
+  <%= f.label :option2 %>
+  <%= f.text_field :option2 %>
+  <%= f.submit %>
+<% end %>
