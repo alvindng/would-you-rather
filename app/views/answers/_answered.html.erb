@@ -1,1 +1,4 @@
-<%= object.answers.first.selection %>
+<h4>Your Choice: <%= object.answers.last.selection %></h4>
+<h4><%= object.option1%> Votes: <%=object.averageCount(object.option1_count)%>%</h4>
+<h4><%= object.option2%> Votes: <%=object.averageCount(object.option2_count)%>%</h4>
+<h4>Total Count: <%= object.totalCount%></h4>
