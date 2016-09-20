@@ -16,6 +16,8 @@ class QuestionsController < ApplicationController
         format.html { redirect_to questions_path }
         format.js
       end
+    else
+      render :new
     end
   end
 
