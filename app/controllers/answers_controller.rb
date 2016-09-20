@@ -1,6 +1,5 @@
 class AnswersController < ApplicationController
   def new
-    @answer = Answer.new
   end
 
   def create
@@ -24,8 +23,6 @@ class AnswersController < ApplicationController
         format.html { redirect_to questions_path }
         format.js
       end
-    else
-      render :new
     end
   end
 

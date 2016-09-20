@@ -9,6 +9,14 @@ describe "the add an answer process", js: true do
     expect(page).to have_content 'Your Choice: Yas'
   end
 
+  it "selects the other answer" do
+    question = FactoryGirl.create(:question)
+    visit questions_path
+    choose('answer_selection_nah')
+    click_button('Create Answer')
+    expect(page).to have_content 'Your Choice: Nah'
+  end
+
   it "shows the number of votes", js: true do
     question = FactoryGirl.create(:question)
     visit questions_path
